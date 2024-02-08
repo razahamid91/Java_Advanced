@@ -1,5 +1,8 @@
 package GUI;
 
+import java.awt.Color;
+import java.awt.Container;
+
 import javax.swing.*;
 
 public class jfram_demo {
@@ -15,8 +18,15 @@ public class jfram_demo {
 
         // jf.setTitle("my first application of gui"); // for set title
 
-        ImageIcon icon = new ImageIcon("./images.jpg");
+        ImageIcon icon = new ImageIcon("\"D:\\sem8\\advanced java\\GUI\\images.jpg\""); // for set icon
         jf.setIconImage(icon.getImage());
+
+        // for giving whole container properties
+        Container contr = jf.getContentPane();
+        contr.setBackground(Color.BLUE);
+
+        // handle the resize button
+        jf.setResizable(false);
 
     }
 
