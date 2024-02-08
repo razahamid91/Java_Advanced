@@ -8,7 +8,9 @@ public class jfram_demo {
         JFrame jf = new JFrame();
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jf.setVisible(true);
-        jf.setSize(800);
+        // jf.setSize(800, 600);
+        // jf.setLocation(500,300);
+        jf.setBounds(500,300,800,600); // for set size as well location is used setBounds   
     }
     
 }
