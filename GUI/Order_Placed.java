@@ -1,8 +1,10 @@
 package GUI;
+import java.awt.Color;
 import java.awt.Container;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +17,7 @@ public class Order_Placed {
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container c= jf.getContentPane();
         c.setLayout(null);
+
 
         JCheckBox chbox1 = new JCheckBox("  Pizza - 100");
         JCheckBox chbox2 = new JCheckBox("  Pani Puri - 50");
@@ -36,7 +39,18 @@ public class Order_Placed {
 
         JButton oderButton = new JButton("Placed Oder");
         oderButton.setBounds(100, 400, 200, 50);
+        oderButton.setBackground(Color.LIGHT_GRAY);
         c.add(oderButton);
+
+        JLabel lblmenu = new JLabel("Choose your items from Menu :");
+        lblmenu.setBounds(100, 50,200,50);
+        lblmenu.setForeground(Color.RED);
+        c.add(lblmenu);
+
+        JLabel lblamount = new JLabel("Bill :");
+        lblamount.setBounds(300, 250,200,50);
+        lblamount.setForeground(Color.RED);
+        c.add( lblamount);
 
         oderButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -58,7 +72,9 @@ public class Order_Placed {
                     total += 10;
                 }
 
-                JOptionPane.showMessageDialog(jf, "Total Bill: " + total);
+                lblamount.setText("The total amount : " + total);
+
+                // JOptionPane.showMessageDialog(jf, "Total Bill: " + total);
             }
         });
 
