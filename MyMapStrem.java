@@ -1,18 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
 
-import java.util.*;
-import java.util.stream.Collectors;
-
-public class MyMapStrem {
-
+ class Ques1 {
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-
-        List<Integer> square = numbers.stream().map(x -> x * x).collect(Collectors.toList());
-        System.out.println(numbers);
-        System.out.println(square);
-
-        // original arry is not mutable
-        System.out.println(numbers);
+        List<Integer> elements = new ArrayList<>();
+        elements.add(2);
+        elements.add(3);
+        elements.add(4);
+        elements.add(5);
+        elements.add(6);
+        elements.stream()
+                .filter(e -> e % 2 == 0)
+                .sorted()
+                .limit(5)
+                .forEach(System.out::println);
     }
-
 }

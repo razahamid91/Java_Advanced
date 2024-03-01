@@ -31,7 +31,7 @@ class Calculator extends JFrame implements ActionListener{
         c.add(label2);
         labelResult=new JLabel("Result:");
         labelResult.setBounds(100,400,150,50);
-        labelResult.setForeground(Color.RED); // Set labelResult text color to red
+        labelResult.setForeground(Color.RED); 
         c.add(labelResult);
         txt1=new JTextField(0);
         txt1.setBounds(250,50,150,50);
@@ -87,6 +87,6 @@ class Calculator extends JFrame implements ActionListener{
 
 public class MyCalculator {
     public static void main(String[] args){
-        Calculator c = new Calculator();
+        new Calculator();
     }
 }
