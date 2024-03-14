@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /*TYPES OF LAyout 
-1- null -> when the component positions def by us.
+1- null -> when the component positions define by us.
 2- border LAyout -> top, bottom, left, right.
 3- flow LAyout-> arrenge the component automatically
 4- grid LAyout-> in the form of matrix
