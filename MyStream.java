@@ -13,11 +13,11 @@ public class MyStream {
         al.add(9);
         al.add(12);
         al.add(23);
-        
+
         Stream<Integer> str = al.stream();
         System.out.println(al);
         str.forEach(x -> System.out.println(x));
-        
+
         // Create a new stream after applying distinct and sorted operations
         Stream<Integer> newStr = al.stream().distinct().sorted();
         System.out.println("After sorted in distinct order");
